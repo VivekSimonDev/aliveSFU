@@ -9,7 +9,7 @@
 
 import UIKit
 
-class AddCardioExercise: UIViewController {
+class AddCardioExercise: UIViewController, UITextFieldDelegate {
     
     //Mark: Properties
 
@@ -18,6 +18,9 @@ class AddCardioExercise: UIViewController {
     @IBOutlet weak var timeInput: UITextField!
     @IBOutlet weak var resistanceInput: UITextField!
     @IBOutlet weak var daysSegment: UISegmentedControl!
+    
+    @IBOutlet weak var category: UIView!
+    @IBOutlet weak var form: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,15 @@ class AddCardioExercise: UIViewController {
         let currDay = DaysInAWeek(rawValue : calendar.component(.weekday, from: date as Date))!
         daysSegment.selectedSegmentIndex = currDay.index - 1
         
+        let borderColor = UIColor.init(red: 238, green: 238, blue: 238).cgColor
+        category.layer.borderColor = borderColor
+        form.layer.borderColor = borderColor
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     override func didReceiveMemoryWarning() {

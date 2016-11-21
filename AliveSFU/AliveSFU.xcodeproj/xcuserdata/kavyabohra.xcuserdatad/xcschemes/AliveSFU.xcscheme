@@ -48,6 +48,16 @@
                ReferencedContainer = "container:AliveSFU.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C699DB8A1DCDD7E50088CAEE"
+               BuildableName = "JBChartTests.xctest"
+               BlueprintName = "JBChartTests"
+               ReferencedContainer = "container:AliveSFU.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

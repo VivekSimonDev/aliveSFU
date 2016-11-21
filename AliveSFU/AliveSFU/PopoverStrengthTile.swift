@@ -10,7 +10,7 @@
 
 import UIKit
 
-class PopoverStrengthTile: UIViewController {
+class PopoverStrengthTile: UIViewController, UITextFieldDelegate {
 
     var uuid : String = ""
     @IBOutlet weak var reps: UILabel!
@@ -43,6 +43,11 @@ class PopoverStrengthTile: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     @IBAction func closePopUp(_ sender: Any) {

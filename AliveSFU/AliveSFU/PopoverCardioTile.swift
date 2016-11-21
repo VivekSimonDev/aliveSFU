@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PopoverCardioTile: UIViewController {
+class PopoverCardioTile: UIViewController, UITextFieldDelegate {
     
     var currCardioExercise : CardioExercise? = nil
     var uuid : String = ""
@@ -50,6 +50,12 @@ class PopoverCardioTile: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func changeExercise(_ sender: AnyObject) {
             exerciseNameTextField.text = exerciseName.text
         timeTextField.text = time.text

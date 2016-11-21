@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Count" syncable="YES">
-        <attribute name="exerciseArray" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Exercise" representedClassName="ExerciseMO" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -15,8 +12,41 @@
         <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Flags" syncable="YES">
+        <attribute name="enableFitnessBuddy" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="enableSleep" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="primaryKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileExists" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userLoggedIn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="SleepAnalysis" representedClassName="SleepAnalysis" syncable="YES" codeGenerationType="class">
+        <attribute name="friday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="monday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="primaryKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saturday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sunday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thursday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tuesday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wednesday" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="UserDetails" syncable="YES">
+        <attribute name="ageGroup" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="heightFeet" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="heightInches" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personalGoals" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Count" positionX="-54" positionY="18" width="128" height="60"/>
         <element name="Exercise" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Flags" positionX="-54" positionY="99" width="128" height="120"/>
+        <element name="UserDetails" positionX="-63" positionY="54" width="128" height="225"/>
+        <element name="SleepAnalysis" positionX="-54" positionY="108" width="128" height="165"/>
     </elements>
 </model>

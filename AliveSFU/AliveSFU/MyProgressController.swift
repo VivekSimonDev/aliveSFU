@@ -43,7 +43,8 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var exerciseLabel: UIView!
+
 /* Constants */
     
     let CATEGORY_CARDIO_VIEW_TAG = 100
@@ -57,7 +58,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     var currDay : DaysInAWeek = DaysInAWeek.Sunday
     var panTileOrigin = CGPoint(x: 0, y: 0)
     var chartLegend = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"] //x-axis information
-    //let chartData = [5, 8, 6, 2, 9, 6, 4]//sample data to display bar graph, replace with actual exercise completion numbers
+    //var chartData = [5, 8, 6, 2, 9, 6, 4]//sample data to display bar graph, replace with actual exercise completion numbers
     var chartData: [Int] = [] //Array that counts completed exercises
     let SFURed = UIColor(red: 166, green: 25, blue: 46)
     let SFUGrey = UIColor(red: 84, green: 88, blue: 90)
@@ -66,7 +67,6 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
         
         let calendar = NSCalendar.current
         let date = NSDate()
@@ -86,6 +86,11 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
         view.addGestureRecognizer(leftEdge)
         view.addGestureRecognizer(rightEdge)*/
 
+        let borderColor = UIColor.init(red: 238, green: 238, blue: 238).cgColor
+        contentView.layer.borderColor = borderColor
+        barChart.layer.borderColor = borderColor
+        exerciseLabel.layer.borderColor = borderColor
+        
         for view in contentView.subviews {
             view.removeFromSuperview()
         }
@@ -97,7 +102,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    
+        
         barChart.reloadData()
         _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(MyProgressController.showChart), userInfo: nil, repeats: false)
         
@@ -109,12 +114,9 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     override func viewWillAppear(_ animated: Bool) {
         populateStackView()
         updateChartData()
+        self.navigationController?.isNavigationBarHidden = true
         
-        if (contentView.subviews.count == 1 && contentView.subviews.first?.tag == PLACEHOLDER_TAG) {
-            contentViewHeight.constant = scrollView.frame.height
-        } else {
-            contentViewHeight.constant = CGFloat(contentView.subviews.count) * TILE_HEIGHT
-        }
+        updateContentViewSize()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -124,7 +126,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     }
 
     override func viewDidLayoutSubviews() {
-        scrollView.contentSize.height = CGFloat(contentView.subviews.count) * (TILE_HEIGHT + 10)
+        scrollView.contentSize.height = CGFloat(contentView.subviews.count) * (TILE_HEIGHT + 5)
         scrollView.isScrollEnabled = true;
         scrollView.isUserInteractionEnabled = true;
         scrollView.canCancelContentTouches = true;
@@ -142,12 +144,8 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
         let changedIndex = sender.selectedSegmentIndex
         currDay = DaysInAWeek(rawValue: changedIndex + 1)!
         populateStackView()
+        updateContentViewSize()
         
-        if (contentView.subviews.count == 1 && contentView.subviews.first?.tag == PLACEHOLDER_TAG) {
-            contentViewHeight.constant = scrollView.frame.height
-        } else {
-            contentViewHeight.constant = CGFloat(contentView.subviews.count) * TILE_HEIGHT
-        }
         scrollView.layoutIfNeeded()
     }
     
@@ -271,6 +269,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     {
         populateStackView()
         updateChartData()
+        updateContentViewSize()
     }
     
     //Function for populating the exercise tiles
@@ -343,7 +342,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
         //Creating a footer with appropriate Day labels. Spacing is hard coded unfortunately
         let footer = UILabel(frame: CGRect(x: 0, y: 0, width: barChart.frame.width, height: 16))
         footer.textColor = UIColor.black
-        footer.text = "  \(chartLegend[0])     \(chartLegend[1])     \(chartLegend[2])    \(chartLegend[3])    \(chartLegend[4])    \(chartLegend[5])        \(chartLegend[6])"
+        footer.text = " \(chartLegend[0])     \(chartLegend[1])     \(chartLegend[2])     \(chartLegend[3])    \(chartLegend[4])     \(chartLegend[5])        \(chartLegend[6])"
         footer.textAlignment = NSTextAlignment.left
         
         //Creating a header.
@@ -389,6 +388,14 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     func updateChartData() {
         chartData = DataHandler.countCompletion()
         barChart.reloadData()
+    }
+    
+    func updateContentViewSize() {
+        if (contentView.subviews.count == 1 && contentView.subviews.first?.tag == PLACEHOLDER_TAG) {
+            contentViewHeight.constant = scrollView.frame.height
+        } else {
+            contentViewHeight.constant = CGFloat(contentView.subviews.count) * (TILE_HEIGHT + 5)
+        }
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {

@@ -3,13 +3,14 @@
 //  Nudge
 //
 //  Created by Terry Worona on 9/3/13.
+//  Editted by Vivek Sharma on 19/11/16
 //  Copyright (c) 2013 Jawbone. All rights reserved.
 //
 
 #import "JBBarChartView.h"
 
 // Numerics
-CGFloat static const kJBBarChartViewBarBasePaddingMutliplier = 50.0f;
+CGFloat static const kJBBarChartViewBarBasePaddingMutliplier = 140.0f;
 CGFloat static const kJBBarChartViewUndefinedCachedHeight = -1.0f;
 CGFloat static const kJBBarChartViewStateAnimationDuration = 0.05f;
 CGFloat static const kJBBarChartViewStatePopOffset = 10.0f;
@@ -317,7 +318,7 @@ static UIColor *kJBBarChartViewDefaultBarColor = nil;
     {
         CGFloat totalPadding = (barCount - 1) * self.barPadding;
         CGFloat availableWidth = self.bounds.size.width - totalPadding;
-        return availableWidth / barCount;
+        return (availableWidth / barCount);
     }
     return 0;
 }

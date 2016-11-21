@@ -18,12 +18,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        DataHandler.initDataHandlerData()
+        
+        let flags = DataHandler.getFlags()
+        
+        if let isLogged = flags.isUserLoggedIn {
+            if (isLogged) {
+                //User is already logged in.
+                if let userProfileExists = flags.profileExists {
+                    if (userProfileExists) {
+                        
+                        //User profile exists, take user to main storyboard (Home page)
+                        let sb = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = sb.instantiateInitialViewController()!
+                        vc.modalPresentationStyle = .fullScreen
+                        vc.modalTransitionStyle = .crossDissolve
+                        
+                        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+                        self.window?.rootViewController = vc
+                        self.window?.makeKeyAndVisible()
+                        
+                    } else {
+                        
+                        //User profile doesn't exist. Take user to first time login
+                        let sb = UIStoryboard(name: "firstTime", bundle: nil)
+                        let vc = sb.instantiateInitialViewController()!
+                        vc.modalPresentationStyle = .fullScreen
+                        vc.modalTransitionStyle = .crossDissolve
+                        
+                        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+                        self.window?.rootViewController = vc
+                        self.window?.makeKeyAndVisible()
+                    }
+                }
+            } else {
+                //User is not logged. Show login page
+                let sb = UIStoryboard(name: "login", bundle: nil)
+                let vc = sb.instantiateInitialViewController()!
+                vc.modalPresentationStyle = .fullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                
+                self.window = UIWindow.init(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = vc
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        
         // TODO - Remove this!!!!!!
         //DataHandler.deleteExerciseArray()
         
         
         return true
+    }/*
+    func application(application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        return true
     }
+    
+    func application(application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return true
+    }*/
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
