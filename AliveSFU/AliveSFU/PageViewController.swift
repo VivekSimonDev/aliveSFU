@@ -81,7 +81,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         let enableSleep = (subpageArray[3] as! Subpage3ViewController).getDataForSave()
         let enableFitnessBuddy = (subpageArray[4] as! Subpage4ViewController).getDataForSave()
         
-        DataHandler.saveProfile(pd: personalData, fd: fitnessData, enableSleep: enableSleep, enableFitnessBuddy: enableFitnessBuddy)
+        _ = DataHandler.saveProfile(pd: personalData, fd: fitnessData, enableSleep: enableSleep, enableFitnessBuddy: enableFitnessBuddy)
     }
 
 }

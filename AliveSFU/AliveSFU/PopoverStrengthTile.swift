@@ -121,7 +121,7 @@ class PopoverStrengthTile: UIViewController, UITextFieldDelegate {
         editableButtons.isHidden = !yes;
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

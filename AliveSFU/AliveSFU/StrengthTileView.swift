@@ -16,6 +16,8 @@ class StrengthTileView: UIView {
     @IBOutlet weak var exerciseName: UILabel!
     @IBOutlet weak var sets: UILabel!
     @IBOutlet weak var reps: UILabel!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var checkmark: UIImageView!
     
     let TILE_HEIGHT = CGFloat(20);
     let PADDING = CGFloat(20);
@@ -29,6 +31,11 @@ class StrengthTileView: UIView {
         
         Bundle.main.loadNibNamed("StrengthTileViewUI", owner: self, options: nil);
         self.addSubview(view);    // adding the top level view to the view hierarchy
+        
+        let origImage = UIImage(named: "Checkmark");
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        checkmark.image = tintedImage
+        checkmark.isHidden = true
         
         self.exerciseName.text = name;
         self.sets.text = sets;

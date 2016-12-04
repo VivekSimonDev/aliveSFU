@@ -1,0 +1,259 @@
+[
+  {
+    "keywords": [
+      "Fly"
+    ],
+    "name": "Pec Dec",
+    "equipmentName": "Pec Dec",
+    "targetMuscle": "Chest",
+    "steps" : [
+			"1. Sit on the machine with your back flat on the pad, and take hold of the handles with your arms parallel to the floor.",
+			"2. Push the handles together slowly and squeeze your chest muscles. Breathe out during this motion.",
+    		"3. Return to the starting position as you breathe in. Repeat for the number of desired repetitions."
+    ]
+  },
+  {
+    "name": "Reverse Pec Dec",
+    "equipmentName": "Pec Dec",
+    "targetMuscle": "Rear Shoulders",
+    "steps" : [
+		"1. Adjust the handles so that they are fully to the rear and grab them with your hands facing inwards.",
+		"2. Pull your arms out to the side and back and contract your rear shoulders.",
+		"3. Return to the starting position. Repeat for the numbaer of desired repetitions."
+    ]
+  },
+  {
+    "name": "Standing Calf Raises",
+    "equipmentName": "Donkey Calf",
+    "targetMuscle": "Calves",
+    "steps" : [
+		"1. Place the balls of your feet on the platform with your heels extending out. Ensure that your knees are straight.",
+		"2. Extend your ankles as high as possible. Ensure that your knees are not bending and you are fully using your calves.",
+		"3. Lower your heels a little past below the platform and bend your ankles until calves are stretched.",
+		"4. Repeat for the number of desired repetitions."
+    ]
+  },
+  {
+    "name": "Tricep Pushdowns",
+    "equipmentName": "Triceps Machine",
+    "targetMuscle": "Triceps",
+    "steps" : [
+		"1. Place the back of your arms/elbow flat on the pad and your hands on the hand rest.",
+		"2. Lower your triceps all the way until your arms are reaching straight towards the ground. Ensure that your shoulders are stationary during the motion.",
+		"3. Return to the strating position. Repeat for the number of desired repetitions."
+    ]
+  },
+  {
+  	"keywords": [
+      "Lats"
+    ],
+    "name": "Lat Pulldowns",
+    "equipmentName": "Lat Pulldown",
+    "targetMuscle": "Back",
+    "steps" : [
+		"1. Adjust the seat and knee pads to your height. Grab the handles in a desired grip.",
+		"2. Lean back slightly and make a small curvature around your lower back while sticking your chest out. This is your starting position.",
+		"3. While breahting out, bring the bar down until it reaches your chest. Concentrate on contracting your back muscles during this motion.",
+		"4. Raise the bar back to the starting position. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Bicep Curls",
+    "equipmentName": "Biceps Curl",
+    "targetMuscle": "Biceps",
+    "steps" : [
+		"1. Place your elbows flat on the pad and grip the handle.",
+		"2. Keeping your shoulders and upper arm stationary, curl the handle up fully towards your shoulders.",
+		"3. Slowly lower the bar back to the starting position making sure that your arms are straight at the bottom of the movement.",
+		"4. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Bicep Machine",
+    "equipmentName": "Bicep Machine",
+    "targetMuscle": "Biceps",
+    "steps" : [
+		"1. Place your elbows flat against the pads and grip the handles.",
+		"2. Keeping your shoulders and upper arm stationary, curl the handle up fully towards your shoulders.",
+		"3. Slowly lower the handles back to the starting position making sure that your arms are straight at the bottom of the movement.",
+		"4. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Vertical Rows",
+    "equipmentName": "Vertical Row",
+    "targetMuscle": "Back",
+    "steps" : [
+		"1. Place your chest flat against the pad and straighten your back.",
+		"2. Slowly pull the handles back, while concentrating on contracting your back muscles.",
+		"3. Return to the starting position. Repeat for the desired number of repetitions."
+    ]
+  },
+    {
+    "name": "Seated Rows",
+    "equipmentName": "Seated Rows",
+    "targetMuscle": "Back",
+    "steps" : [
+		"1. Place your feet flat against the feetpad and straighten your back.",
+		"2. Slowly pull the handles back, while concentrating on contracting your back muscles.",
+		"3. Return to the starting position. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Assisted Pull Ups",
+    "equipmentName": "Pull Ups/Dips Station",
+    "targetMuscle": "Back",
+    "steps" : [
+		"1. Select the amount of 'helping' weight you desire for the exercise.",
+		"2. Climb up the steps carefully and grasp the pull up bar handles.",
+    "3. Place your feet on the weight platform and lower your body all the way down. This will be your starting position.",
+		"4. While exhaling, pull your torso up until the bar touches your chest. Concentrate on flexing your back muscles as you do so.",
+		"5. Lower your body and return to the staring position as you inhale. Repeat for the number of desired repetitions.",
+		"6. When the exercise is fully completed, carefully step onto the steps and step off from the machine."
+    ],
+    "extraSteps" : {
+    	"images" : [
+    		"Assisted Station No Weight 1",
+    		"Assisted Station No Weight 2"
+    	],
+    	"text" : [
+        "7. If you would like to perform the exercise without assistance, place a counterweight to lower the feet platform to the ground."
+      ],
+    }
+  },
+  {
+    "name": "Assisted Dips",
+    "equipmentName": "Pull Ups/Dips Station",
+    "targetMuscle": "Triceps",
+    "steps" : [
+		"1. Select the amount of 'helping' weight you desire for the exercise.",
+		"2. Climb up the steps carefully and grab the dip handles to your sides.",
+    "3. Place your feet on the weight platform and hold your body at arm's length with your arms nearly locked above the handles.",
+		"4. Inhale and slowly lower yourself downward. Ensure that your torso stays upright and elbows close to your body.",
+    "5. Lower yourself until there is a 90 degree angle formed at your elbow.",
+		"6. Return to the starting position as you exhale. Repeat for the number of desired repetitions.",
+		"7. When the exercise is fully completed, carefully step onto the steps and step off from the machine."
+    ],
+    "extraSteps" : {
+    	"images" : [
+        "Assisted Station No Weight"
+      ],
+    	"text" : [
+        "8. If you would like to perform the exercise without assistance, place a counterweight to lower the feet platform to the ground."
+      ],
+    }
+  },
+  {
+    "keywords": [
+      "Quadriceps",
+      "Hamstrings"
+    ],
+    "name": "Leg Press",
+    "equipmentName": "Seated Leg Press",
+    "targetMuscle": "Legs",
+    "steps" : [
+		"1. Plant your feet a little wider than shoulder width on the platform. Grasp the handles with your chest up and your head looking forward.",
+		"2. Push the platform driving through the heels of your feet. Do not lock your knees, especially when doing heaver weight.",
+		"3. Return to the starting position without fully returning the weight to the stack. Repeat for the desired number of repetions."
+    ]
+  },
+  {
+    "name": "Leg Extensions",
+    "equipmentName": "Leg Extensions",
+    "targetMuscle": "Quadriceps",
+    "steps" : [
+		"1. Adjust the kneepad so that your lower and upper legs form a 90 degree angle.",
+		"2. Extend your legs to the maximum using your quadriceps and ensure that your body remains stationary.",
+		"3. Slowly lower the weight back to the starting position. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Lying Leg Curls",
+    "equipmentName": "Lying Leg Curls",
+    "targetMuscle": "Hamstrings",
+    "steps" : [
+		"1. Lying flat on the bench, fully stretch your legs and grasph the handles on the sides.",
+		"2. While exhaling, curl your legs up as far as possible towards your thighs without lifting the upper legs from the pad.",
+		"3. Lower your legs back to the starting position. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Seated Leg Curls",
+    "equipmentName": "Seated Leg Curls",
+    "targetMuscle": "Hamstrings",
+    "steps" : [
+		"1. Fully stretch your legs out and place them on the leg rest and secure the lap pads against your thighs.",
+		"2. Lower your legs as far back as possible to your thighs. Concentrate on the feel of your hamstrings contracting.",
+		"3. Raise your legs back to the starting position. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Chest Press",
+    "equipmentName": "Vertical Bench",
+    "targetMuscle": "Chest",
+    "steps" : [
+		"1. Grab the handles with your back flat against the seat and your chest up.",
+		"2. Push the handles away from your body as you exhale.",
+		"3. Return to the starting position as you inhale. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Lateral Raises",
+    "equipmentName": "Lateral Raise",
+    "targetMuscle": "Shoulders",
+    "steps" : [
+		"1. Places the bases of your upper arms agaist the pads and grasp the handles.",
+		"2. Move your upper arms laterally away from your body until your they are parallel to the floor.",
+		"3. Return to the starting position and repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "keywords": [
+      "Obliques",
+      "Abs"
+    ],
+    "name": "Rotary Torso",
+    "equipmentName": "Rotary Torso",
+    "targetMuscle": "Abdominals",
+    "steps" : [
+		"1. IMPORTANT: Only perform this exercise one side at a time.",
+		"2. Grasp the handles with the inner crook of your arms around the pads.",
+    "3. Tilt your body to the desired side slightly until you feel the weight being lifted slightly as well.",
+		"4. Turn your torso all the way around as much as your flexibility allows. Ensure that your hips are stationary",
+		"5. Return to the starting position making sure not to drop the weight. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Rotary Shoulder",
+    "equipmentName": "Rotary Shoulder",
+    "targetMuscle": "Shoulders",
+    "steps" : [
+		  "1. Grasp the handles as you keep the elbows bent and in line with your torso.",
+		  "2. Lift the handles and the weight as you exhale. Make sure to extend the arms fully.",
+		  "3. Lower the handles slowly back to the starting position as you inhale. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "name": "Shoulder Press",
+    "equipmentName": "Shoulder Press",
+    "targetMuscle": "Shoulders",
+    "steps" : [
+      "1. Grasp the handles as you keep the elbows bent and in line with your torso",
+      "2. Lift the handles and the weight as you exhale. Make sure to extend the arms fully.",
+      "3. Lower the handles slowly back to the starting position as you inhale. Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "keywords": [
+      "Abs"
+    ],
+    "name": "Ab Cruncher",
+    "equipmentName": "Ab Cruncer",
+    "targetMuscle": "Abdominals",
+    "steps" : [
+      "1. Place your feet under the platform below and grasp the handles",
+      "2. As you breathe out, crunch your upper torso and feel your abdominal muscles contracting.",
+      "3. Slowly return to the starting position as you breathe in. Repeat for the desired number of repetitions."
+    ]
+  }
+]

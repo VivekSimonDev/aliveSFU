@@ -113,7 +113,15 @@ class HomePageController: UIViewController {
         let sleepCalendar = Calendar(identifier: .gregorian)
         let sleepDay = sleepCalendar.component(.weekday, from: sleepDate)
         let sleep = weekSleep[sleepDay-1]
-        self.todaySleep.text = NSString(format: "%.2f", sleep) as String
+        self.todaySleep.text = hourToString(hour: sleep)
+    }
+    
+    func hourToString(hour:Double) -> String {
+        let hours = Int(floor(hour))
+        let mins = Int(floor(hour * 60).truncatingRemainder(dividingBy: 60))
+        let secs = Int(floor(hour * 3600).truncatingRemainder(dividingBy: 60))
+        
+        return String(format:"%d:%02d:%02d", hours, mins, secs)
     }
 }
 

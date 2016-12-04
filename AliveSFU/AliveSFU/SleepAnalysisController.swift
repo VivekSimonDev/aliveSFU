@@ -134,8 +134,8 @@ class SleepAnalysisController: UIViewController, JBBarChartViewDelegate, JBBarCh
     }
     
     func barChartView(_ barChartView: JBBarChartView!, didSelectBarAt index: UInt) {
-        let data = chartData[Int(index)]
-        let key = chartLegend[Int(index)]
+        _ = chartData[Int(index)]
+        _ = chartLegend[Int(index)]
         
         //Uncomment below if implementing a label to display hours slept when a bar is touched
         //infoLabel.text = "Workouts completed on \(key): \(data)"
@@ -157,8 +157,26 @@ class SleepAnalysisController: UIViewController, JBBarChartViewDelegate, JBBarCh
         barChart.reloadData()
     }
     
+    func hourToString(hour:Double) -> String {
+        let hours = Int(floor(hour))
+        let mins = Int(floor(hour * 60).truncatingRemainder(dividingBy: 60))
+        let secs = Int(floor(hour * 3600).truncatingRemainder(dividingBy: 60))
+        
+        return String(format:"%d:%02d:%02d", hours, mins, secs)
+    }
+    
+    /*
+    //
+    //
+    // Main sleep analysis algorithm
+    //
+    //
+    */
     
     func retrieveSleepAnalysis() {
+        
+        // Initialize Variables
+        
         let date = Date()
         let formattedDate = DateFormatter()
         formattedDate.timeStyle = .none
@@ -170,13 +188,14 @@ class SleepAnalysisController: UIViewController, JBBarChartViewDelegate, JBBarCh
         
         let healthStore = HKHealthStore()
         
-        // first, we define the object type we want
+        // Start Sleep Analysis
+        
         if let sleepType = HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis) {
             
-            // Use a sortDescriptor to get the recent data first
+            // Set up a query to HealthKit data to get Sleep Data.
+            // Limit to 50 queries
+            // Get data in Descending order of End Date
             let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
-            
-            // we create our query with a block completion to execute
             let query = HKSampleQuery(sampleType: sleepType, predicate: nil, limit: 50, sortDescriptors: [sortDescriptor], resultsHandler: {(query, tmpResult, error) -> Void in
                 
                 if error != nil {
@@ -190,74 +209,103 @@ class SleepAnalysisController: UIViewController, JBBarChartViewDelegate, JBBarCh
                     if let result = tmpResult {
                         
                         if result.count > 0 {
-                            // do something with my data
-                            var maxEndDateBed = date
-                            var minStartDateBed = date
+                            
+                            //Get last night's sleep data by default
+                            let sd = DataHandler.getLastSleepAnalysisData()
+                            
+                            var totalHoursInBed = sd.lastBedHours
+                            var totalHoursAsleep = sd.lastAsleepHours
+                            var percentageOfTimeSlept = sd.lastPercentage
+                            var timeTakenToFallAsleep = sd.lastTimeTakenFallAsleep
+                            var noOfTimesWokenUp = sd.lastTimesWokenUp
+                            var isAsleepDataAvailable = sd.isAsleepDataAvailable
+                            
+                            // We have last data. Now try to get latest data
                             if let firstSample = result.first as? HKCategorySample {
-                                maxEndDateBed = firstSample.endDate
-                                minStartDateBed = firstSample.startDate
-                            }
-                            var minStartDateAsleep = minStartDateBed
-                            var maxEndDateAsleep = maxEndDateBed
-                            var isAsleepDataAvailable = false
-                            
-                            let THRESHOLD_FOR_VALID_TIME = Double(5/60) //5 minutes = 5/60 hours
-                            var noOfValidSamples = 0
-                            var lastValidStartDate = minStartDateBed
-                            
-                            for item in result {
-                                if let sample = item as? HKCategorySample {
-                                    let endDate = formattedDate.string(from: sample.endDate)
-                                    if (endDate == dateString) {
-                                        
-                                        minStartDateBed = minStartDateBed.compare(sample.startDate) == ComparisonResult.orderedDescending ? sample.startDate : minStartDateBed
-                                        
-                                        if (lastValidStartDate.timeIntervalSince(sample.endDate) >= THRESHOLD_FOR_VALID_TIME) {
-                                            lastValidStartDate = sample.startDate
-                                            noOfValidSamples += 1
-                                        }
-                                        
-                                        if (sample.value == HKCategoryValueSleepAnalysis.asleep.rawValue) {
-                                            isAsleepDataAvailable = true
-                                            // If it's the first asleep sample
-                                            minStartDateAsleep = minStartDateAsleep == minStartDateBed ? sample.startDate : minStartDateAsleep
-                                            maxEndDateAsleep = maxEndDateAsleep == maxEndDateBed ? sample.endDate : maxEndDateBed
-                                            
-                                            // For every other asleep sample
-                                            minStartDateAsleep = minStartDateAsleep.compare(sample.startDate) == ComparisonResult.orderedDescending ? sample.startDate : minStartDateAsleep
-                                            maxEndDateAsleep = maxEndDateAsleep.compare(sample.endDate) == ComparisonResult.orderedAscending ? maxEndDateAsleep : maxEndDateAsleep
-                                            
+                                // Only use latest data if the data is from today.
+                                if (formattedDate.string(from: firstSample.endDate) == dateString) {
+                                    
+                                    // Init variables
+                                    
+                                    let maxEndDateBed = firstSample.endDate
+                                    var minStartDateBed = firstSample.startDate
+                                    var minStartDateAsleep = minStartDateBed
+                                    var maxEndDateAsleep = maxEndDateBed
+                                    isAsleepDataAvailable = false
+                                    totalHoursAsleep = 0.0
+                                    var noOfValidSamples = 0
+                                    
+                                    // Process Sleep Data
+                                    
+                                    for item in result {
+                                        if let sample = item as? HKCategorySample {
+                                            let endDate = formattedDate.string(from: sample.endDate)
+                                            if (endDate == dateString) {
+                                                
+                                                minStartDateBed = minStartDateBed.compare(sample.startDate) == ComparisonResult.orderedDescending ? sample.startDate : minStartDateBed
+                                                
+                                                if (sample.value == HKCategoryValueSleepAnalysis.asleep.rawValue) {
+                                                    isAsleepDataAvailable = true
+                                                    
+                                                    minStartDateAsleep = sample.startDate
+                                                    maxEndDateAsleep = sample.endDate
+                                                    totalHoursAsleep += maxEndDateAsleep.timeIntervalSince(minStartDateAsleep) / 3600
+                                                    noOfValidSamples += 1
+                                                }
+                                            }
                                         }
                                     }
+                                    
+                                    // Calculate statistics
+                                    
+                                    totalHoursInBed = maxEndDateBed.timeIntervalSince(minStartDateBed) / 3600
+                                    totalHoursAsleep = totalHoursAsleep == 0.0 ? totalHoursInBed : totalHoursAsleep
+                                    percentageOfTimeSlept = (totalHoursAsleep / totalHoursInBed) * 100
+                                    noOfTimesWokenUp = noOfValidSamples
+                                    timeTakenToFallAsleep = minStartDateAsleep.timeIntervalSince(minStartDateBed) / 3600
+                                    
+                                    // Update Local Storage with this latest data.
+                                    
+                                    let sd = SleepDetails(asleepHrs: totalHoursAsleep, bedHrs: totalHoursInBed, percentageSpentSleeping: percentageOfTimeSlept, noTimesWokenUp: noOfTimesWokenUp, timeTakenFallAsleep: timeTakenToFallAsleep, isAsleepDataAvailable: isAsleepDataAvailable)
+                                    DataHandler.setLastSleepAnalysisData(sd: sd)
+                                    
                                 }
                             }
                             
-                            let totalHoursInBed = maxEndDateBed.timeIntervalSince(minStartDateBed) / 3600
-                            let totalHoursAsleep = maxEndDateAsleep.timeIntervalSince(minStartDateAsleep) / 3600
-                            let percentageOfTimeSlept = (totalHoursAsleep / totalHoursInBed) * 100
-                            let noOfTimesWokenUp = noOfValidSamples
-                            let timeTakenToFallAsleep = minStartDateAsleep.timeIntervalSince(minStartDateBed) / 60
+                            // At this point, data will be either be updated or last data
+                            // Whichever it is, show that data.
                             
                             if (!isAsleepDataAvailable) {
                                 // Asleep data not available. Let user know
                                 self.asleepUnavailableWarning.isHidden = false
                             }
                             
-                            self.hoursInBed.text = String(format: "%.1f", totalHoursInBed)
-                            self.hoursSlept.text = String(format: "%.1f", totalHoursAsleep)
+                            
+                            // Update User Interface
+                            
+                            self.hoursInBed.text = self.hourToString(hour: totalHoursInBed)
+                            self.hoursSlept.text = self.hourToString(hour: totalHoursAsleep)
                             self.percentageSpentSleeping.text = String(format: "%.1f",percentageOfTimeSlept) + "%"
-                            self.timeTakenToSleep.text = String(format: "%.1f", timeTakenToFallAsleep) + " min"
+                            self.timeTakenToSleep.text = self.hourToString(hour: timeTakenToFallAsleep)
                             self.timesWokenUp.text = String(noOfTimesWokenUp)
                             
-                            // Saving total hours slept for graph
+                            
+                            // Save total hours separately to be used by graph
+                            
                             DataHandler.setSleepAnalysisDataForDay(day: dayOfWeek, value: totalHoursAsleep)
                             self.updateChartData()
+                            
+                            
+                            // Refresh UI
                             
                             self.view.layoutSubviews()
                             self.activityIndicator.stopAnimating()
                             self.mainView.alpha = 1
                             self.isDataLoaded = true
                         } else {
+                            
+                            // Something went wrong. Tell user
+                            
                             self.activityIndicator.stopAnimating()
                             self.errorView.isHidden = false
                         }
@@ -265,7 +313,8 @@ class SleepAnalysisController: UIViewController, JBBarChartViewDelegate, JBBarCh
                 }
             })
             
-            // finally, we execute our query
+            // Show loading UI and execute query
+            
             self.activityIndicator.startAnimating()
             self.mainView.alpha = 0.2
             healthStore.execute(query)
