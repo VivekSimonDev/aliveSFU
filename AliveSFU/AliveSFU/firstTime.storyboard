@@ -915,7 +915,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="finishAction:" destination="37G-Ym-g7N" eventType="touchUpInside" id="Off-Kq-Vt9"/>
                                             <action selector="previousAction:" destination="37G-Ym-g7N" eventType="touchUpInside" id="ah4-y5-LAF"/>
                                         </connections>
                                     </button>

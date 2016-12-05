@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        DataHandler.initDataHandlerData()
-        
         let flags = DataHandler.getFlags()
         
         if let isLogged = flags.isUserLoggedIn {
@@ -63,10 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.makeKeyAndVisible()
             }
         }
-        
-        // TODO - Remove this!!!!!!
-        //DataHandler.deleteExerciseArray()
-        
         
         return true
     }/*

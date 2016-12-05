@@ -452,12 +452,6 @@ class Subpage4ViewController: SubpageViewController {
         for button in enableDisableButton {
             if (sender == button) {
                 button.isSelected = true
-                if (button.tag == ENABLE_BUTTON_TAG) {
-                    // Enable fitness buddy in the temp variable
-                    
-                } else if (button.tag == DISABLE_BUTTON_TAG) {
-                    // Disable fitness buddy in the temp variable
-                }
             } else {
                 button.isSelected = false
             }

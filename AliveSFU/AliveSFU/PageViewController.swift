@@ -80,8 +80,18 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         let fitnessData = (subpageArray[2] as! Subpage2ViewController).getDataForSave()
         let enableSleep = (subpageArray[3] as! Subpage3ViewController).getDataForSave()
         let enableFitnessBuddy = (subpageArray[4] as! Subpage4ViewController).getDataForSave()
+        var hash : Int = 0
+        if (enableFitnessBuddy) {
+            let hashMaker = HashAlgorithm()
+            let myProfile = BuddyDetails(ageGroup: fitnessData.ageGroup, fitnessFreq: fitnessData.fitnessFreq, personalGoals: fitnessData.personalGoals, gender: personalData.gender)
+            hash = hashMaker.fieldToHash(profile: myProfile)
+            
+            let dbProfile = firebaseProfile(devID: "", userName: DataHandler.getCurrentUser()!, hashNum: hash)
+            let db = firebaseController()
+            db.configureUser(newUser: dbProfile)
+        }
         
-        DataHandler.saveProfile(pd: personalData, fd: fitnessData, enableSleep: enableSleep, enableFitnessBuddy: enableFitnessBuddy)
+        _ = DataHandler.saveProfile(pd: personalData, fd: fitnessData, enableSleep: enableSleep, enableFitnessBuddy: enableFitnessBuddy, hash : hash)
     }
 
 }

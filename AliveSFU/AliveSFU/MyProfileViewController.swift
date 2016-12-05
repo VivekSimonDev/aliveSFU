@@ -65,7 +65,7 @@ class MyProfileViewController: UIViewController, UITextFieldDelegate {
         ageGroup[fd.ageGroup].isSelected = true
         fitnessFrequency[fd.fitnessFreq].isSelected = true
         
-        var goals = fd.personalGoals.components(separatedBy: ",")
+        let goals = fd.personalGoals.components(separatedBy: ",")
         if (goals.first != "") {
             for char in goals {
                 let index = Int(char)!
@@ -104,7 +104,7 @@ class MyProfileViewController: UIViewController, UITextFieldDelegate {
             let fd = saveFitnessDetails()
             
             DataHandler.updateProfile(pd: pd, fd: fd)
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

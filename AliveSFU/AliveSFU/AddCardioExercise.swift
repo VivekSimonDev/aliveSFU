@@ -64,18 +64,18 @@ class AddCardioExercise: UIViewController, UITextFieldDelegate {
                 //Handle Error
             }
             
-            DataHandler.getExerciseArray()
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = DataHandler.getExerciseArray()
+            _ = self.navigationController?.popToRootViewController(animated: true)
         } else {
             //Do something
         }
     }
     
     @IBAction func cancelButton(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

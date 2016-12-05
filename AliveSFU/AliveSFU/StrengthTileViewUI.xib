@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StrengthTileView" customModule="AliveSFU" customModuleProvider="target">
             <connections>
+                <outlet property="checkmark" destination="qcJ-yX-wSI" id="HDm-sx-Op3"/>
                 <outlet property="exerciseName" destination="R7J-Yq-Fuo" id="XZq-yq-ljv"/>
+                <outlet property="mainView" destination="kfQ-bi-ZbF" id="Lpx-Oj-RKm"/>
                 <outlet property="reps" destination="Xvs-kq-yZt" id="8x9-Z5-b3R"/>
                 <outlet property="sets" destination="Fpb-hB-s2r" id="MiE-t1-WKA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="64Y-03-QO4"/>
@@ -16,28 +22,33 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleAspectFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <rect key="frame" x="0.0" y="0.0" width="365" height="75"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view tag="200" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfQ-bi-ZbF" userLabel="cardioTile">
+                    <rect key="frame" x="0.0" y="0.0" width="365" height="75"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exerciseTileBG" translatesAutoresizingMaskIntoConstraints="NO" id="sZA-QU-E6E" userLabel="exerciseTileBG"/>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7J-Yq-Fuo">
+                            <rect key="frame" x="98.5" y="8" width="169.5" height="29"/>
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <size key="shadowOffset" width="0.0" height="0.0"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2nT-jP-8iE">
+                            <rect key="frame" x="0.0" y="49.5" width="365" height="17.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-o3-s2I">
+                                    <rect key="frame" x="0.0" y="0.0" width="182.5" height="17.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Sets:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxL-z6-vRD" userLabel="Sets">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="xx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpb-hB-s2r" userLabel="Sets">
+                                            <rect key="frame" x="94" y="0.0" width="88.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -48,13 +59,16 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yST-dV-eEW">
+                                    <rect key="frame" x="182.5" y="0.0" width="182.5" height="17.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Reps:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnX-aN-y31" userLabel="Reps">
+                                            <rect key="frame" x="0.0" y="0.0" width="89" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="xx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvs-kq-yZt" userLabel="Reps">
+                                            <rect key="frame" x="94" y="0.0" width="88.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -69,20 +83,37 @@
                                 <constraint firstItem="ubc-o3-s2I" firstAttribute="width" secondItem="yST-dV-eEW" secondAttribute="width" id="Ugc-Rq-LuT"/>
                             </constraints>
                         </stackView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="qcJ-yX-wSI">
+                            <rect key="frame" x="8" y="8" width="23" height="21"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Aa3-cO-xo4"/>
+                                <constraint firstAttribute="width" secondItem="qcJ-yX-wSI" secondAttribute="height" multiplier="39:38" constant="1.4473684210526301" id="NwG-0J-Nca"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
+                    <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="2nT-jP-8iE" firstAttribute="width" secondItem="sZA-QU-E6E" secondAttribute="width" id="2GJ-9A-HYc"/>
-                        <constraint firstItem="R7J-Yq-Fuo" firstAttribute="centerX" secondItem="sZA-QU-E6E" secondAttribute="centerX" id="2Jn-m7-ONL"/>
-                        <constraint firstItem="R7J-Yq-Fuo" firstAttribute="top" secondItem="sZA-QU-E6E" secondAttribute="top" constant="8" id="GDg-aU-vPs"/>
-                        <constraint firstItem="sZA-QU-E6E" firstAttribute="height" secondItem="kfQ-bi-ZbF" secondAttribute="height" id="QIY-2Q-ndr"/>
-                        <constraint firstItem="sZA-QU-E6E" firstAttribute="bottom" secondItem="2nT-jP-8iE" secondAttribute="bottom" constant="8" id="cxR-if-dgQ"/>
-                        <constraint firstItem="sZA-QU-E6E" firstAttribute="centerX" secondItem="kfQ-bi-ZbF" secondAttribute="centerX" id="hh8-i6-ehm"/>
-                        <constraint firstItem="sZA-QU-E6E" firstAttribute="width" secondItem="kfQ-bi-ZbF" secondAttribute="width" id="iTl-cI-c0A"/>
-                        <constraint firstItem="2nT-jP-8iE" firstAttribute="centerX" secondItem="sZA-QU-E6E" secondAttribute="centerX" id="weF-Px-UZx"/>
-                        <constraint firstItem="sZA-QU-E6E" firstAttribute="centerY" secondItem="kfQ-bi-ZbF" secondAttribute="centerY" id="x6a-eu-sZk"/>
+                        <constraint firstItem="R7J-Yq-Fuo" firstAttribute="centerX" secondItem="kfQ-bi-ZbF" secondAttribute="centerX" id="LOJ-cP-PQH"/>
+                        <constraint firstItem="2nT-jP-8iE" firstAttribute="centerX" secondItem="kfQ-bi-ZbF" secondAttribute="centerX" id="Mkd-xy-Efk"/>
+                        <constraint firstItem="R7J-Yq-Fuo" firstAttribute="top" secondItem="kfQ-bi-ZbF" secondAttribute="top" constant="8" id="RfE-6X-Igf"/>
+                        <constraint firstAttribute="bottom" secondItem="2nT-jP-8iE" secondAttribute="bottom" constant="8" id="VDg-FQ-3Dq"/>
+                        <constraint firstAttribute="trailing" secondItem="qcJ-yX-wSI" secondAttribute="trailing" constant="334" id="YC0-nM-Wwb"/>
+                        <constraint firstItem="2nT-jP-8iE" firstAttribute="width" secondItem="kfQ-bi-ZbF" secondAttribute="width" id="kRG-a3-81J"/>
+                        <constraint firstItem="qcJ-yX-wSI" firstAttribute="top" secondItem="kfQ-bi-ZbF" secondAttribute="top" constant="8" id="yWI-Yk-ujV"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="kfQ-bi-ZbF" secondAttribute="bottom" id="Ub8-kq-9YF"/>
                 <constraint firstItem="kfQ-bi-ZbF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WtJ-IH-HQx"/>
@@ -93,11 +124,20 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                    <integer key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="33.5" y="-201.5"/>
         </view>
     </objects>
     <resources>
-        <image name="exerciseTileBG" width="600" height="167"/>
+        <image name="Checkmark" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

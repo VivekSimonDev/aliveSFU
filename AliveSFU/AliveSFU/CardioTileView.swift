@@ -17,6 +17,8 @@ class CardioTileView: UIView {
     @IBOutlet weak var speed: UILabel!
     @IBOutlet weak var resistance: UILabel!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var checkmark: UIImageView!
 
     let TILE_HEIGHT = CGFloat(20);
     let PADDING = CGFloat(20);
@@ -30,6 +32,11 @@ class CardioTileView: UIView {
         
         Bundle.main.loadNibNamed("CardioTileViewUI", owner: self, options: nil);
         self.addSubview(view);    // adding the top level view to the view hierarchy
+        
+        let origImage = UIImage(named: "Checkmark");
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        checkmark.image = tintedImage
+        checkmark.isHidden = true
         
         self.exerciseName.text = name;
         self.speed.text = speed;

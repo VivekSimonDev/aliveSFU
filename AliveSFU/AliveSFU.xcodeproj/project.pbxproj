@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38ACDECF1DEBCDF3009BD164 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDECD1DEBCDF3009BD164 /* ExerciseCell.swift */; };
+		38ACDED01DEBCDF3009BD164 /* ExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38ACDECE1DEBCDF3009BD164 /* ExerciseCell.xib */; };
+		38ACDED91DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDED81DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift */; };
+		38ACDEDB1DEECA6F009BD164 /* TutorialInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */; };
+		38ACDEE31DF0FBCA009BD164 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEE21DF0FBCA009BD164 /* FirebaseController.swift */; };
+		38ACDEE51DF103FF009BD164 /* FirebaseProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEE41DF103FF009BD164 /* FirebaseProfile.swift */; };
+		38E002291DEB6C7A0086A43F /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */; };
 		41B003981DC5B1FC00762D2E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B003971DC5B1FC00762D2E /* Exercise.swift */; };
 		A90440981DCEDF2700C77EEE /* PopoverCardioTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90440971DCEDF2700C77EEE /* PopoverCardioTile.swift */; };
 		A91D9D1A1DCC634F00603AC6 /* StrengthTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */; };
 		A91D9D1E1DCC6C6600603AC6 /* StrengthTileViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */; };
+		A92143CD1DF26291004E27DA /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92143CC1DF26291004E27DA /* SearchResultController.swift */; };
+		A92143CF1DF263E2004E27DA /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92143CE1DF263E2004E27DA /* FAQViewController.swift */; };
+		A92143D31DF26643004E27DA /* BuddyTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92143D21DF26643004E27DA /* BuddyTileView.swift */; };
+		A92143D51DF28C07004E27DA /* FitnessBuddyPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92143D41DF28C07004E27DA /* FitnessBuddyPopover.swift */; };
+		A92143D81DF2BB88004E27DA /* SleepProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92143D71DF2BB88004E27DA /* SleepProfile.swift */; };
 		A92A2C191DD7D71200E0B679 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A2C181DD7D71200E0B679 /* LoginPageViewController.swift */; };
 		A92A2C1B1DD7E11900E0B679 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92A2C1A1DD7E11900E0B679 /* login.storyboard */; };
 		A92A2C1E1DD7E1BE00E0B679 /* SFUCASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A2C1D1DD7E1BE00E0B679 /* SFUCASViewController.swift */; };
 		A92A2C201DDA826900E0B679 /* firstTime.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92A2C1F1DDA826900E0B679 /* firstTime.storyboard */; };
 		A92A2C231DDA85B400E0B679 /* SubpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A2C221DDA85B400E0B679 /* SubpageViewController.swift */; };
+		A94E5DBF1DEE83FF003CBA51 /* IncomingRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E5DBE1DEE83FF003CBA51 /* IncomingRequests.swift */; };
 		A953E2281DC97F620059F78E /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953E2271DC97F620059F78E /* DataHandler.swift */; };
 		A953E22A1DC98F060059F78E /* CardioTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953E2291DC98F060059F78E /* CardioTileView.swift */; };
 		A953E22C1DCA8EB00059F78E /* CardioTileViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = A953E22B1DCA8EB00059F78E /* CardioTileViewUI.xib */; };
+		A9545BB91DE98BB60012A448 /* ProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9545BB71DE98BB60012A448 /* ProgramsViewController.swift */; };
+		A9545BBA1DE98BB60012A448 /* TrainersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9545BB81DE98BB60012A448 /* TrainersViewController.swift */; };
+		A95986881DEF7E23005CFFE9 /* BuddyTile.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95986871DEF7E23005CFFE9 /* BuddyTile.xib */; };
+		A959868A1DEF8AEA005CFFE9 /* BuddyFinderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95986891DEF8AEA005CFFE9 /* BuddyFinderSettings.swift */; };
 		A985705F1DC2E1D100C3AA32 /* AddNewExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985705E1DC2E1D100C3AA32 /* AddNewExerciseController.swift */; };
 		A98570621DC2E7FF00C3AA32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98570601DC2E7FF00C3AA32 /* Main.storyboard */; };
 		A98570641DC315B100C3AA32 /* AddStrengthExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98570631DC315B100C3AA32 /* AddStrengthExercise.swift */; };
@@ -38,6 +55,8 @@
 		A9AE2C471DC1822D00FB5BC0 /* MyProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2C461DC1822D00FB5BC0 /* MyProgressController.swift */; };
 		A9AE2C491DC1823C00FB5BC0 /* FitnessBuddyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2C481DC1823C00FB5BC0 /* FitnessBuddyController.swift */; };
 		A9AE2C4B1DC1824C00FB5BC0 /* SleepAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AE2C4A1DC1824C00FB5BC0 /* SleepAnalysisController.swift */; };
+		A9B0D06E1DEEC7A2004CBF4D /* BuddyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B0D06D1DEEC7A2004CBF4D /* BuddyProfile.swift */; };
+		A9B0D0701DEEC841004CBF4D /* FirstTimeBuddyFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B0D06F1DEEC841004CBF4D /* FirstTimeBuddyFinder.swift */; };
 		A9DD17621DC968F300979495 /* AppDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DD17611DC968F300979495 /* AppDataController.swift */; };
 		A9FCD5E81DDF19CF00A75BCC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FCD5E71DDF19CF00A75BCC /* HealthKit.framework */; };
 		C699DB8C1DCDD7E50088CAEE /* JBChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C699DB831DCDD7E50088CAEE /* JBChart.framework */; };
@@ -51,6 +70,7 @@
 		C699DBAB1DCDD8570088CAEE /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C699DBA51DCDD8570088CAEE /* JBChartView.m */; };
 		C699DBAC1DCDD8570088CAEE /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = C699DBA61DCDD8570088CAEE /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C699DBAD1DCDD8570088CAEE /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C699DBA71DCDD8570088CAEE /* JBLineChartView.m */; };
+		FA31EAB11DF0D73A00B8F930 /* HashAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31EAB01DF0D73A00B8F930 /* HashAlgorithm.swift */; };
 		FA7FB3171DC333BD00781EFB /* PopoverStrengthTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FB3161DC333BD00781EFB /* PopoverStrengthTile.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,18 +127,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38ACDECD1DEBCDF3009BD164 /* ExerciseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
+		38ACDECE1DEBCDF3009BD164 /* ExerciseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseCell.xib; sourceTree = "<group>"; };
+		38ACDED81DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialsDisclaimerViewController.swift; sourceTree = "<group>"; };
+		38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialInstructionsViewController.swift; sourceTree = "<group>"; };
+		38ACDEE21DF0FBCA009BD164 /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		38ACDEE41DF103FF009BD164 /* FirebaseProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseProfile.swift; sourceTree = "<group>"; };
+		38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
 		41B003971DC5B1FC00762D2E /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A90440971DCEDF2700C77EEE /* PopoverCardioTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCardioTile.swift; sourceTree = "<group>"; };
 		A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrengthTileView.swift; sourceTree = "<group>"; };
 		A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrengthTileViewUI.xib; sourceTree = "<group>"; };
+		A92143CC1DF26291004E27DA /* SearchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		A92143CE1DF263E2004E27DA /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		A92143D21DF26643004E27DA /* BuddyTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyTileView.swift; sourceTree = "<group>"; };
+		A92143D41DF28C07004E27DA /* FitnessBuddyPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyPopover.swift; sourceTree = "<group>"; };
+		A92143D71DF2BB88004E27DA /* SleepProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepProfile.swift; sourceTree = "<group>"; };
 		A92A2C181DD7D71200E0B679 /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		A92A2C1A1DD7E11900E0B679 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		A92A2C1D1DD7E1BE00E0B679 /* SFUCASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFUCASViewController.swift; sourceTree = "<group>"; };
 		A92A2C1F1DDA826900E0B679 /* firstTime.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = firstTime.storyboard; sourceTree = "<group>"; };
 		A92A2C221DDA85B400E0B679 /* SubpageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubpageViewController.swift; sourceTree = "<group>"; };
+		A94E5DBE1DEE83FF003CBA51 /* IncomingRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingRequests.swift; sourceTree = "<group>"; };
 		A953E2271DC97F620059F78E /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		A953E2291DC98F060059F78E /* CardioTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardioTileView.swift; sourceTree = "<group>"; };
 		A953E22B1DCA8EB00059F78E /* CardioTileViewUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardioTileViewUI.xib; sourceTree = "<group>"; };
+		A9545BB71DE98BB60012A448 /* ProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramsViewController.swift; sourceTree = "<group>"; };
+		A9545BB81DE98BB60012A448 /* TrainersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainersViewController.swift; sourceTree = "<group>"; };
+		A95986871DEF7E23005CFFE9 /* BuddyTile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuddyTile.xib; sourceTree = "<group>"; };
+		A95986891DEF8AEA005CFFE9 /* BuddyFinderSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyFinderSettings.swift; sourceTree = "<group>"; };
 		A985705E1DC2E1D100C3AA32 /* AddNewExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewExerciseController.swift; sourceTree = "<group>"; };
 		A98570611DC2E7FF00C3AA32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A98570631DC315B100C3AA32 /* AddStrengthExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStrengthExercise.swift; sourceTree = "<group>"; };
@@ -144,6 +181,8 @@
 		A9AE2C461DC1822D00FB5BC0 /* MyProgressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProgressController.swift; sourceTree = "<group>"; };
 		A9AE2C481DC1823C00FB5BC0 /* FitnessBuddyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyController.swift; sourceTree = "<group>"; };
 		A9AE2C4A1DC1824C00FB5BC0 /* SleepAnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAnalysisController.swift; sourceTree = "<group>"; };
+		A9B0D06D1DEEC7A2004CBF4D /* BuddyProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyProfile.swift; sourceTree = "<group>"; };
+		A9B0D06F1DEEC841004CBF4D /* FirstTimeBuddyFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTimeBuddyFinder.swift; sourceTree = "<group>"; };
 		A9DD17611DC968F300979495 /* AppDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataController.swift; sourceTree = "<group>"; };
 		A9FCD5E51DDF19CF00A75BCC /* AliveSFU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AliveSFU.entitlements; sourceTree = "<group>"; };
 		A9FCD5E71DDF19CF00A75BCC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -159,6 +198,7 @@
 		C699DBA51DCDD8570088CAEE /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
 		C699DBA61DCDD8570088CAEE /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
 		C699DBA71DCDD8570088CAEE /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		FA31EAB01DF0D73A00B8F930 /* HashAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashAlgorithm.swift; sourceTree = "<group>"; };
 		FA7FB3161DC333BD00781EFB /* PopoverStrengthTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverStrengthTile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +244,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38ACDED11DEBCF00009BD164 /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				38ACDECE1DEBCDF3009BD164 /* ExerciseCell.xib */,
+				38ACDECD1DEBCDF3009BD164 /* ExerciseCell.swift */,
+				38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */,
+				38ACDED81DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift */,
+				38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */,
+			);
+			name = Tutorials;
+			sourceTree = "<group>";
+		};
+		A92143D61DF2BB6D004E27DA /* Sleep Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				A92143D71DF2BB88004E27DA /* SleepProfile.swift */,
+			);
+			name = "Sleep Analysis";
+			sourceTree = "<group>";
+		};
 		A92A2C161DD7D42D00E0B679 /* MyProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +322,35 @@
 			name = "Data Handler";
 			sourceTree = "<group>";
 		};
+		A94E5DBB1DEE8323003CBA51 /* Fitness Buddy Finder */ = {
+			isa = PBXGroup;
+			children = (
+				A9B0D06D1DEEC7A2004CBF4D /* BuddyProfile.swift */,
+				A9B0D06F1DEEC841004CBF4D /* FirstTimeBuddyFinder.swift */,
+				A95986891DEF8AEA005CFFE9 /* BuddyFinderSettings.swift */,
+				FA31EAB01DF0D73A00B8F930 /* HashAlgorithm.swift */,
+				A94E5DBE1DEE83FF003CBA51 /* IncomingRequests.swift */,
+				A95986871DEF7E23005CFFE9 /* BuddyTile.xib */,
+				A92143D21DF26643004E27DA /* BuddyTileView.swift */,
+				38ACDEE21DF0FBCA009BD164 /* FirebaseController.swift */,
+				38ACDEE41DF103FF009BD164 /* FirebaseProfile.swift */,
+				A92143CC1DF26291004E27DA /* SearchResultController.swift */,
+				A92143D41DF28C07004E27DA /* FitnessBuddyPopover.swift */,
+			);
+			name = "Fitness Buddy Finder";
+			sourceTree = "<group>";
+		};
+		A97772D71DE94F7500559A8F /* SFU Recreation */ = {
+			isa = PBXGroup;
+			children = (
+				38ACDED11DEBCF00009BD164 /* Tutorials */,
+				A9545BB71DE98BB60012A448 /* ProgramsViewController.swift */,
+				A9545BB81DE98BB60012A448 /* TrainersViewController.swift */,
+				A92143CE1DF263E2004E27DA /* FAQViewController.swift */,
+			);
+			name = "SFU Recreation";
+			sourceTree = "<group>";
+		};
 		A9A729D71DE26A410085D399 /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +390,9 @@
 				A9FCD5E51DDF19CF00A75BCC /* AliveSFU.entitlements */,
 				A9AE2C1F1DC17F9900FB5BC0 /* Assets.xcassets */,
 				A92A2C171DD7D5BA00E0B679 /* Top Level View Controllers */,
+				A97772D71DE94F7500559A8F /* SFU Recreation */,
+				A92143D61DF2BB6D004E27DA /* Sleep Analysis */,
+				A94E5DBB1DEE8323003CBA51 /* Fitness Buddy Finder */,
 				A92A2C161DD7D42D00E0B679 /* MyProgress */,
 				A9AE2C161DC17F9900FB5BC0 /* AppDelegate.swift */,
 				A92A2C2C1DDA9B8E00E0B679 /* Data Handler */,
@@ -497,7 +589,7 @@
 					A9AE2C121DC17F9900FB5BC0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3TTPMU2CZK;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -554,8 +646,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92A2C201DDA826900E0B679 /* firstTime.storyboard in Resources */,
+				38ACDED01DEBCDF3009BD164 /* ExerciseCell.xib in Resources */,
 				A92A2C1B1DD7E11900E0B679 /* login.storyboard in Resources */,
 				A98570621DC2E7FF00C3AA32 /* Main.storyboard in Resources */,
+				A95986881DEF7E23005CFFE9 /* BuddyTile.xib in Resources */,
 				A91D9D1E1DCC6C6600603AC6 /* StrengthTileViewUI.xib in Resources */,
 				A9AE2C231DC17F9900FB5BC0 /* LaunchScreen.storyboard in Resources */,
 				A953E22C1DCA8EB00059F78E /* CardioTileViewUI.xib in Resources */,
@@ -600,19 +694,35 @@
 			files = (
 				A9DD17621DC968F300979495 /* AppDataController.swift in Sources */,
 				A90440981DCEDF2700C77EEE /* PopoverCardioTile.swift in Sources */,
+				A9545BB91DE98BB60012A448 /* ProgramsViewController.swift in Sources */,
+				38ACDEDB1DEECA6F009BD164 /* TutorialInstructionsViewController.swift in Sources */,
 				A92A2C191DD7D71200E0B679 /* LoginPageViewController.swift in Sources */,
 				A9AE2C4B1DC1824C00FB5BC0 /* SleepAnalysisController.swift in Sources */,
+				38ACDECF1DEBCDF3009BD164 /* ExerciseCell.swift in Sources */,
 				A9AE2C1B1DC17F9900FB5BC0 /* SFURecreationController.swift in Sources */,
+				FA31EAB11DF0D73A00B8F930 /* HashAlgorithm.swift in Sources */,
+				38E002291DEB6C7A0086A43F /* TutorialsViewController.swift in Sources */,
+				A959868A1DEF8AEA005CFFE9 /* BuddyFinderSettings.swift in Sources */,
+				A9B0D06E1DEEC7A2004CBF4D /* BuddyProfile.swift in Sources */,
+				A92143CF1DF263E2004E27DA /* FAQViewController.swift in Sources */,
 				A9AE2C171DC17F9900FB5BC0 /* AppDelegate.swift in Sources */,
+				A9B0D0701DEEC841004CBF4D /* FirstTimeBuddyFinder.swift in Sources */,
 				A9A729D61DE269E00085D399 /* MyProfileViewController.swift in Sources */,
 				A9AE2C471DC1822D00FB5BC0 /* MyProgressController.swift in Sources */,
+				38ACDEE31DF0FBCA009BD164 /* FirebaseController.swift in Sources */,
+				A92143D31DF26643004E27DA /* BuddyTileView.swift in Sources */,
 				A98570641DC315B100C3AA32 /* AddStrengthExercise.swift in Sources */,
+				A92143D51DF28C07004E27DA /* FitnessBuddyPopover.swift in Sources */,
+				A9545BBA1DE98BB60012A448 /* TrainersViewController.swift in Sources */,
+				38ACDEE51DF103FF009BD164 /* FirebaseProfile.swift in Sources */,
 				FA7FB3171DC333BD00781EFB /* PopoverStrengthTile.swift in Sources */,
 				41B003981DC5B1FC00762D2E /* Exercise.swift in Sources */,
+				38ACDED91DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift in Sources */,
 				A91D9D1A1DCC634F00603AC6 /* StrengthTileView.swift in Sources */,
 				A9A729CA1DE10F4E0085D399 /* PageViewController.swift in Sources */,
 				A9A729D41DE169E70085D399 /* Flags.swift in Sources */,
 				A92A2C1E1DD7E1BE00E0B679 /* SFUCASViewController.swift in Sources */,
+				A92143CD1DF26291004E27DA /* SearchResultController.swift in Sources */,
 				A98570661DC315C000C3AA32 /* AddCardioExercise.swift in Sources */,
 				A9A729D01DE14D6C0085D399 /* AppData.xcdatamodeld in Sources */,
 				A92A2C231DDA85B400E0B679 /* SubpageViewController.swift in Sources */,
@@ -620,7 +730,9 @@
 				A953E22A1DC98F060059F78E /* CardioTileView.swift in Sources */,
 				A9AE2C191DC17F9900FB5BC0 /* HomePageController.swift in Sources */,
 				A9AE2C491DC1823C00FB5BC0 /* FitnessBuddyController.swift in Sources */,
+				A92143D81DF2BB88004E27DA /* SleepProfile.swift in Sources */,
 				A953E2281DC97F620059F78E /* DataHandler.swift in Sources */,
+				A94E5DBF1DEE83FF003CBA51 /* IncomingRequests.swift in Sources */,
 				A985705F1DC2E1D100C3AA32 /* AddNewExerciseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

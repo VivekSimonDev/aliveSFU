@@ -65,18 +65,18 @@ class AddStrengthExercise: UIViewController, UITextFieldDelegate {
             if (result == -1) {
                 //Handle Error
             }
-            DataHandler.getExerciseArray()
-            self.navigationController?.popToRootViewController(animated: true)
+            _ = DataHandler.getExerciseArray()
+            _ = self.navigationController?.popToRootViewController(animated: true)
         } else {
             
         }
     }
 
     @IBAction func cancelButton(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    private func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
